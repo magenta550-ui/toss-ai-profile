@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-toss-blue: #0064ff;
+  --color-toss-blue-light: #e8f3ff;
+  --color-toss-gray-50: #f9fafb;
+  --color-toss-gray-100: #f2f4f6;
+  --color-toss-gray-200: #e5e8eb;
+  --color-toss-gray-300: #d1d6db;
+  --color-toss-gray-400: #b0b8c1;
+  --color-toss-gray-500: #8b95a1;
+  --color-toss-gray-600: #6b7684;
+  --color-toss-gray-700: #4e5968;
+  --color-toss-gray-800: #333d4b;
+  --color-toss-gray-900: #191f28;
+
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-toss-gray-900 font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.toss-button {
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.toss-button:active {
+  transform: scale(0.95);
+}
+
+.toss-button:disabled {
+  opacity: 0.5;
+}
+
+.toss-button:disabled:active {
+  transform: scale(1);
+}
+
+.toss-button-primary {
+  background-color: var(--color-toss-blue);
+  color: white;
+}
+
+.toss-button-primary:hover {
+  background-color: rgba(0, 100, 255, 0.9);
+}
+
+.toss-button-secondary {
+  background-color: var(--color-toss-gray-100);
+  color: var(--color-toss-gray-700);
+}
+
+.toss-button-secondary:hover {
+  background-color: var(--color-toss-gray-200);
+}
+
+.toss-card {
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  border: 1px solid var(--color-toss-gray-100);
+}
